@@ -11794,7 +11794,7 @@ div#notebook {
 <p>The rubric contains <em>optional</em> "Stand Out Suggestions" for enhancing the project beyond the minimum requirements. If you decide to pursue the "Stand Out Suggestions", you should include the code in this Jupyter notebook.</p>
 <hr>
 <h3 id="Why-We're-Here">Why We're Here<a class="anchor-link" href="#Why-We're-Here">&#182;</a></h3><p>In this notebook, you will make the first steps towards developing an algorithm that could be used as part of a mobile or web app.  At the end of this project, your code will accept any user-supplied image as input.  If a dog is detected in the image, it will provide an estimate of the dog's breed.  If a human is detected, it will provide an estimate of the dog breed that is most resembling.  The image below displays potential sample output of your finished project (... but we expect that each student's algorithm will behave differently!).</p>
-<p><img src="images/sample_dog_output.png" alt="Sample Dog Output"></p>
+<p><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/sample_dog_output.png?raw=1" alt="Sample Dog Output"></p>
 <p>In this real-world setting, you will need to piece together a series of models to perform different tasks; for instance, the algorithm that detects humans in an image will be different from the CNN that infers dog breed.  There are many points of possible failure, and no perfect algorithm exists.  Your imperfect solution will nonetheless create a fun user experience!</p>
 <h3 id="The-Road-Ahead">The Road Ahead<a class="anchor-link" href="#The-Road-Ahead">&#182;</a></h3><p>We break the notebook into separate steps.  Feel free to use the links below to navigate the notebook.</p>
 <ul>
@@ -11823,7 +11823,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Downloading the dog and human dataset</span>
@@ -11859,7 +11859,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extractting the datasets</span>
@@ -11894,7 +11894,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -11946,7 +11946,7 @@ There are 8351 total dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Downloading the pre-trained face detector</span>
@@ -11983,7 +11983,7 @@ There are 8351 total dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>                
@@ -13154,16 +13154,12 @@ jsSSQSyxxBJHYskgllhiiSOxZBBLLLHEkVgyiCWWWOJI/C+WGljoIVZcTAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">human_files_short</span> <span class="o">=</span> <span class="n">human_files</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
 <span class="n">dog_files_short</span> <span class="o">=</span> <span class="n">dog_files</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
 
-<span class="c1">#-#-# Do NOT modify the code above this line. #-#-#</span>
-
-<span class="c1">## TODO: Test the performance of the face_detector algorithm </span>
-<span class="c1">## on the images in human_files_short and dog_files_short.</span>
 <span class="n">homosapiens</span><span class="p">,</span> <span class="n">canis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">display</span><span class="p">(</span><span class="n">progress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">display_id</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">il</span><span class="p">,</span> <span class="p">(</span><span class="n">human</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">human_files_short</span><span class="p">,</span> <span class="n">dog_files_short</span><span class="p">)):</span>
@@ -13173,8 +13169,8 @@ jsSSQSyxxBJHYskgllhiiSOxZBBLLLHEkVgyiCWWWOJI/C+WGljoIVZcTAAAAABJRU5ErkJggg==
   <span class="k">if</span> <span class="n">face_detector</span><span class="p">(</span><span class="n">dog</span><span class="p">):</span>
     <span class="n">canis</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Human detection accuracy: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">homosapiens</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dogs detected as human: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">canis</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Human detection accuracy: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">100.</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">homosapiens</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">human_files_short</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dogs detected as human: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">100.</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">canis</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dog_files_short</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -13283,7 +13279,7 @@ Dogs detected as human: 15%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use GPU if it&#39;s available</span>
@@ -13317,7 +13313,7 @@ Dogs detected as human: 15%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">VGG16</span><span class="p">)</span>
@@ -13431,11 +13427,7 @@ Dogs detected as human: 15%
 <span class="sd">    Returns:</span>
 <span class="sd">        Index corresponding to VGG-16 model&#39;s prediction</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="c1">## TODO: Complete the function.</span>
-    <span class="c1">## Load and pre-process an image from the given img_path</span>
-    <span class="c1">## Return the *index* of the predicted class for that image</span>
-    
+     
     <span class="c1"># Opening the image</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
    
@@ -13484,7 +13476,6 @@ Dogs detected as human: 15%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### returns &quot;True&quot; if a dog is detected in the image stored at img_path</span>
 <span class="k">def</span> <span class="nf">dog_detector</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
-    <span class="c1">## TODO: Complete the function.</span>
     <span class="n">pred_idx</span> <span class="o">=</span> <span class="n">VGG16_predict</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
     
     <span class="c1"># Return true if 151&lt;= pred_idx &lt;=268</span>
@@ -13520,13 +13511,10 @@ Dogs detected as human: 15%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Test the performance of the dog_detector function</span>
-<span class="c1">### on the images in human_files_short and dog_files_short.</span>
-
-<span class="n">homosapiens</span><span class="p">,</span> <span class="n">canis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">homosapiens</span><span class="p">,</span> <span class="n">canis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">display</span><span class="p">(</span><span class="n">progress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">display_id</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">il</span><span class="p">,</span> <span class="p">(</span><span class="n">human</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">human_files_short</span><span class="p">,</span> <span class="n">dog_files_short</span><span class="p">)):</span>
   <span class="n">out</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">progress</span><span class="p">(</span><span class="n">il</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
@@ -13535,8 +13523,8 @@ Dogs detected as human: 15%
   <span class="k">if</span> <span class="n">dog_detector</span><span class="p">(</span><span class="n">dog</span><span class="p">):</span>
     <span class="n">canis</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Humans detected as dog: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">homosapiens</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dog Detection Accuracy: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">canis</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Humans detected as dog: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">100.</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">homosapiens</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">human_files_short</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dog Detection Accuracy: </span><span class="si">{}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">100.</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">canis</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dog_files_short</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -13623,8 +13611,8 @@ Dog Detection Accuracy: 100%
 </thead>
 <tbody>
 <tr>
-<td><img src="images/Brittany_02625.jpg" width="100"></td>
-<td><img src="images/Welsh_springer_spaniel_08203.jpg" width="200"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Brittany_02625.jpg?raw=1" width="100"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Welsh_springer_spaniel_08203.jpg?raw=1" width="200"></td>
 </tr>
 </tbody>
 </table>
@@ -13637,8 +13625,8 @@ Dog Detection Accuracy: 100%
 </thead>
 <tbody>
 <tr>
-<td><img src="images/Curly-coated_retriever_03896.jpg" width="200"></td>
-<td><img src="images/American_water_spaniel_00648.jpg" width="200"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Curly-coated_retriever_03896.jpg?raw=1" width="200"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/American_water_spaniel_00648.jpg?raw=1" width="200"></td>
 </tr>
 </tbody>
 </table>
@@ -13652,9 +13640,9 @@ Dog Detection Accuracy: 100%
 </thead>
 <tbody>
 <tr>
-<td><img src="images/Labrador_retriever_06457.jpg" width="150"></td>
-<td><img src="images/Labrador_retriever_06455.jpg" width="240"></td>
-<td><img src="images/Labrador_retriever_06449.jpg" width="220"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Labrador_retriever_06457.jpg?raw=1" width="150"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Labrador_retriever_06455.jpg?raw=1" width="240"></td>
+<td><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/Labrador_retriever_06449.jpg?raw=1" width="220"></td>
 </tr>
 </tbody>
 </table>
@@ -13689,9 +13677,6 @@ Dog Detection Accuracy: 100%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">torchvision</span> <span class="k">import</span> <span class="n">datasets</span>
-
-<span class="c1">### TODO: Write data loaders for training, validation, and test sets</span>
-<span class="c1">## Specify appropriate transforms, and batch_sizes</span>
 
 <span class="c1"># Batch size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">20</span>
@@ -13773,7 +13758,7 @@ We are resiziing the images to 255x255 so that it be in proper square shape then
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
@@ -13781,7 +13766,6 @@ We are resiziing the images to 255x255 so that it be in proper square shape then
 
 <span class="c1"># define the CNN architecture</span>
 <span class="k">class</span> <span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="c1">### TODO: choose an architecture, and complete the class</span>
             
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Net</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -13815,8 +13799,6 @@ We are resiziing the images to 255x255 so that it be in proper square shape then
         <span class="c1"># add 2nd hidden layer, with relu activation function</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">x</span>
-
-<span class="c1">#-#-# You do NOT have to modify the code below this line. #-#-#</span>
 
 <span class="c1"># instantiate the CNN</span>
 <span class="n">model_scratch</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
@@ -13893,11 +13875,11 @@ We are resiziing the images to 255x255 so that it be in proper square shape then
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
 
-<span class="c1">### TODO: select loss function</span>
+<span class="c1">### loss function</span>
 <span class="n">criterion_scratch</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
 
-<span class="c1">### TODO: select optimizer</span>
-<span class="n">optimizer_scratch</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model_scratch</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">)</span>
+<span class="c1">### optimizer</span>
+<span class="n">optimizer_scratch</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model_scratch</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14000,7 +13982,7 @@ We are resiziing the images to 255x255 so that it be in proper square shape then
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># train the model</span>
@@ -14165,7 +14147,7 @@ Training Loss: 3.599581 	Validation Loss: 3.623942
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">loaders</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">):</span>
@@ -14318,13 +14300,12 @@ Test Accuracy: 14% (120/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torchvision.models</span> <span class="k">as</span> <span class="nn">models</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 
-<span class="c1">## TODO: Specify model architecture </span>
 <span class="c1"># Loading the pretrained model</span>
 <span class="n">model_transfer</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">densenet161</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -15030,7 +15011,7 @@ Test Accuracy: 14% (120/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Freeze parameters so we don&#39;t backprop through them</span>
@@ -15065,7 +15046,7 @@ Test Accuracy: 14% (120/836)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -15088,7 +15069,7 @@ Test Accuracy: 14% (120/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use GPU if it&#39;s available</span>
@@ -15132,7 +15113,13 @@ Test Accuracy: 14% (120/836)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong>  From my experience in previous deep learning exercises, I  prefer densenet architecture has it has lower error, even according to torchvision.models documentation. I created a custom classifier and attached it to the pretrained model. The size of the  model checkpoint is also low comparatively.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>From my experience in previous deep learning exercises, I  prefer DenseNet architecture has it has lower error, even according to torchvision.models documentation. I created a custom classifier and attached it to the pretrained model. The size of the  model checkpoint is also low comparatively.</li>
+<li>Researchwork has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In the DenseNet, each layer connects to every other layer in a feed-forward fashion. </li>
+<li>DenseNets alleviate the vanishing-gradient problem, strengthen feature propagation, encourage feature reuse, and substantially reduce the number of parameters.</li>
+<li>Also the Densenet has been trained on ImageNet dataset that contains several classes of dog breeds thus making it more preferable for our task, where we can use the pretrained weights instead of training our custom architecture from Step 3 which will take very long time.</li>
+</ul>
 
 </div>
 </div>
@@ -15176,7 +15163,7 @@ Test Accuracy: 14% (120/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loaders_transfer</span> <span class="o">=</span> <span class="n">dataloaders</span>
@@ -15256,7 +15243,7 @@ Training Loss: 1.031695 	Validation Loss: 0.453005
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">loaders_transfer</span><span class="p">,</span> <span class="n">model_transfer</span><span class="p">,</span> <span class="n">criterion_transfer</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">)</span>
@@ -15302,10 +15289,7 @@ Test Accuracy: 83% (702/836)
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Write a function that takes a path to an image as input</span>
-<span class="c1">### and returns the dog breed that is predicted by the model.</span>
-
-<span class="c1"># list of class names by index, i.e. a name can be accessed like class_names[0]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list of class names by index, i.e. a name can be accessed like class_names[0]</span>
 <span class="n">class_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">image_datasets</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">classes</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">predict_breed_transfer</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
@@ -15333,7 +15317,7 @@ Test Accuracy: 83% (702/836)
         <span class="n">output</span> <span class="o">=</span> <span class="n">model_transfer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
         <span class="n">ps</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
         <span class="n">top_prob</span><span class="p">,</span> <span class="n">top_class</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
-    <span class="k">return</span> <span class="n">top_prob</span><span class="p">,</span> <span class="n">top_class</span> <span class="c1">#class_names[int(top_class)]</span>
+    <span class="k">return</span> <span class="n">top_prob</span><span class="p">,</span> <span class="n">top_class</span> 
 </pre></div>
 
 </div>
@@ -15355,7 +15339,7 @@ Test Accuracy: 83% (702/836)
 </ul>
 <p>You are welcome to write your own functions for detecting humans and dogs in images, but feel free to use the <code>face_detector</code> and <code>dog_detector</code> functions developed above.  You are <strong>required</strong> to use your CNN from Step 4 to predict dog breed.</p>
 <p>Some sample output for our algorithm is provided below, but feel free to design your own user experience!</p>
-<p><img src="images/sample_human_output.png" alt="Sample Human Output"></p>
+<p><img src="https://github.com/resilientmax/Dog-Breed-Recognition/blob/master/images/sample_human_output.png?raw=1" alt="Sample Human Output"></p>
 <h3 id="(IMPLEMENTATION)-Write-your-Algorithm">(IMPLEMENTATION) Write your Algorithm<a class="anchor-link" href="#(IMPLEMENTATION)-Write-your-Algorithm">&#182;</a></h3>
 </div>
 </div>
@@ -15365,13 +15349,9 @@ Test Accuracy: 83% (702/836)
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Write your algorithm.</span>
-<span class="c1">### Feel free to use as many code cells as needed.</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="k">def</span> <span class="nf">run_app</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
-    <span class="c1">## handle cases for a human face, dog, and neither</span>
     
     <span class="k">if</span> <span class="n">face_detector</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
       <span class="n">top_prob</span><span class="p">,</span> <span class="n">top_class</span> <span class="o">=</span> <span class="n">predict_breed_transfer</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
@@ -15438,16 +15418,13 @@ Test Accuracy: 83% (702/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## TODO: Execute your algorithm from Step 6 on</span>
-<span class="c1">## at least 6 images on your computer.</span>
-<span class="c1">## Feel free to use as many code cells as needed.</span>
-
-<span class="c1">## suggested code, below</span>
-<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">human_files</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">dog_files</span><span class="p">[:</span><span class="mi">3</span><span class="p">])):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">human_files</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">dog_files</span><span class="p">[:</span><span class="mi">3</span><span class="p">])):</span>
     <span class="n">run_app</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    
+<span class="c1"># Scroll down for the output of the downloaded images in the next cells    </span>
 </pre></div>
 
 </div>
@@ -33100,7 +33077,7 @@ R9X9hAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Downloading test images from the internet</span>
@@ -33139,7 +33116,7 @@ R9X9hAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
